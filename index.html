@@ -21,7 +21,7 @@
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
               <a class="nav-link" href="#">Random Drink</a>
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="#">Tell A Friend</a>
             </div>
           </div>
         </div>
@@ -29,22 +29,25 @@
 
 <div class="container">
     <h1 class="text-center">Tipsy Website</h1>
-    <h2 class="text-center">Choose your alcohol base on what you have at home - we'll show you what you can make!</h2>
-    <div id="dropdown" class="dropdown">
-        <button id="alcohol" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+    <h4 class="text-center">Choose the alcohol you have - we'll show you what you can make!</h4>
+    <div id="dropdown" class="dropdown text-center">
+        <button id="alcohol-choice" class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
           Alcohol
         </button>
-        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-          <li><a class="dropdown-item" href="#">Gin</a></li>
-          <li><a class="dropdown-item" href="#">Whiskey</a></li>
-          <li><a class="dropdown-item" href="#">Vodka</a></li>
-
+        <ul id="alcohol" class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+          <li><a id="gin" class="dropdown-item" href="#">Gin</a></li>
+          <li><a id="whiskey"class="dropdown-item" href="#">Whiskey</a></li>
+          <li><a id="bourbon"class="dropdown-item" href="#">Bourbon</a></li>
+          <li><a id="vodka" class="dropdown-item" href="#">Vodka</a></li>
+          <li><a id="tequila" class="dropdown-item" href="#">Tequila</a></li>
         </ul>
       </div>
 </div>
 
-<div id="results" class="container">
-  
+<div class="container">
+  <div id="results" class="row">
+
+  </div>
 </div>
 
 

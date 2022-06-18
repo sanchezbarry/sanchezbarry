@@ -2,10 +2,32 @@
     margin-bottom: 15px;
 }
 
+h4 {
+    padding: 15px 15px;
+}
+
 #dropdown{
-    margin: 0 auto;
+    padding-bottom: 15px;
 }
 
 #alcohol {
     justify-content: center;
 }
+
+#results img {
+    width: 300px;
+}
+
+#results h3 {
+    padding-top: 15px;
+    text-align: center;
+}
+
+#results button {
+    margin: 15px;
+}
+
+#cocktail {
+    margin: 10px;
+}
+
