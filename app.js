@@ -25,6 +25,9 @@ async function fetchTheDrinks(urlToFetch) {
     const cocktailRecipeList = document.getElementById('cocktails')
     cocktailRecipeList.innerHTML = ''
 
+    const cocktailRandomList = document.getElementById('random-drink')
+    cocktailRandomList.innerHTML = ''
+
     for (let x = 0; x < data.drinks.length; x++) {
 
         const cocktail = data.drinks[x]
@@ -64,8 +67,14 @@ async function fetchTheDrinks(urlToFetch) {
 //clears the previous result and combines the id of the button to make the api call for cocktail details
 const learnToMake = () => {
     console.log('i will work. testing')
-    const resultsElement = document.querySelector('#results')
+    const resultsElement = document.querySelector('#cocktails')
     resultsElement.innerHTML = ''
+
+    const cocktailRandomList = document.getElementById('random-drink')
+    cocktailRandomList.innerHTML = ''
+
+    const cocktailDivList = document.getElementById('results')
+    cocktailDivList.innerHTML = ''
 
     const drinkId2 = event.target.id
     console.log(drinkId2)
@@ -86,6 +95,11 @@ async function recipeFetched(recipeToFetch){
     const cocktailRecipeList = document.getElementById('cocktails')
     cocktailRecipeList.innerHTML = ''
 
+    const cocktailDivList = document.getElementById('results')
+    cocktailDivList.innerHTML = ''
+
+    const cocktailRandomList = document.getElementById('random-drink')
+    cocktailRandomList.innerHTML = ''
 
     const cocktail = data.drinks[0]
     const cocktailDiv = document.createElement('div')
@@ -131,6 +145,75 @@ async function recipeFetched(recipeToFetch){
     cocktailDiv.appendChild(bodyText)
 
 }
+
+const randomDrinkBtn = document.querySelector('#random-button')
+randomDrinkBtn.addEventListener('click', event => {
+    randomDrink(randomUrl)
+        }
+    )
+
+
+const randomUrl = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
+
+async function randomDrink(randomUrl){
+    const response = await fetch(randomUrl)
+    console.log('response: ', response)
+    const data = await response.json()
+
+    const cocktailRecipeList = document.getElementById('cocktails')
+    cocktailRecipeList.innerHTML = ''
+
+    const cocktailDivList = document.getElementById('results')
+    cocktailDivList.innerHTML = ''
+
+    const cocktailRandomList = document.getElementById('random-drink')
+    cocktailRandomList.innerHTML = ''
+
+
+    const cocktail = data.drinks[0]
+    const cocktailDiv = document.createElement('div')
+    cocktailDiv.setAttribute('class', 'col shadow-sm p-3 mb-5 bg-body rounded text-center')
+    cocktailDiv.setAttribute('id', 'cocktail')
+    cocktailRandomList.append(cocktailDiv)
+
+    const cocktailImg = document.createElement('img');
+    cocktailImg.src = cocktail.strDrinkThumb;
+    cocktailImg.setAttribute('id', 'cocktail-img')
+    cocktailImg.setAttribute('class', 'rounded mx-auto d-block')
+    cocktailDiv.appendChild(cocktailImg);
+
+    const cocktailName = cocktail.strDrink
+    const heading = document.createElement('h4')
+    heading.innerHTML = cocktailName
+    cocktailDiv.appendChild(heading)
+    
+    const cocktailIngredients = document.createElement("ul");
+    cocktailDiv.appendChild(cocktailIngredients);  
+    
+    const getIngredients = Object.keys(cocktail)
+      .filter(function (ingredient) {
+        return ingredient.indexOf("strIngredient") == 0;
+      })
+      .reduce(function (ingredients, ingredient) {
+        if (cocktail[ingredient] != null) {
+          ingredients[ingredient] = cocktail[ingredient];
+        }
+        return ingredients;
+      }, {});
+  
+    for (let key in getIngredients) {
+      let value = getIngredients[key];
+      listItem = document.createElement("li");
+      listItem.innerHTML = value;
+      cocktailIngredients.appendChild(listItem);
+    }
+
+    const instructions = cocktail.strInstructions
+    const bodyText = document.createElement('p')
+    bodyText.innerHTML = instructions
+    cocktailDiv.appendChild(bodyText)
+}
+
 
 
 // const learnToMake = document.querySelector('#results')
