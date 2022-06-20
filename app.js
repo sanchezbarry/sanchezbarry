@@ -1,3 +1,5 @@
+
+//this combines the user's alcohol choice with the partial api url to pull data of the chosen alcohol
 const alcoholChoice = document.querySelector('#alcohol')
 alcoholChoice.addEventListener('click', event => {
     const chosenAlcohol = event.target.innerText
@@ -11,7 +13,7 @@ alcoholChoice.addEventListener('click', event => {
 })
 
 
-
+// churns the cocktail results of the chosen alcohol. This also assigns the cocktail ID to the id of the button.
 async function fetchTheDrinks(urlToFetch) {
     const response = await fetch(urlToFetch)
     console.log('response: ', response)
@@ -19,6 +21,9 @@ async function fetchTheDrinks(urlToFetch) {
 
     const cocktailDivList = document.getElementById('results')
     cocktailDivList.innerHTML = ''
+
+    const cocktailRecipeList = document.getElementById('cocktails')
+    cocktailRecipeList.innerHTML = ''
 
     for (let x = 0; x < data.drinks.length; x++) {
 
@@ -43,7 +48,6 @@ async function fetchTheDrinks(urlToFetch) {
         ingredientBtn.setAttribute('type', 'button')
         ingredientBtn.setAttribute('class', 'btn btn-secondary')
 
-        // ingredientBtn.setAttribute('href', './recipe.html')
         ingredientBtn.innerText = "Learn to Make"
         const drinkId = cocktail.idDrink
         ingredientBtn.setAttribute('id', `${drinkId}`)
@@ -51,20 +55,80 @@ async function fetchTheDrinks(urlToFetch) {
 
         document.getElementById(drinkId).addEventListener('click', learnToMake)
 
-        // const btnLink = document.createElement('a')
-        // // btnLink.setAttribute('href', './recipe.html')
-        // btnLink.setAttribute('id', 'button')
-        // ingredientBtn.append(btnLink)
 
 
     }
 
 }
 
+//clears the previous result and combines the id of the button to make the api call for cocktail details
 const learnToMake = () => {
     console.log('i will work. testing')
     const resultsElement = document.querySelector('#results')
     resultsElement.innerHTML = ''
+
+    const drinkId2 = event.target.id
+    console.log(drinkId2)
+
+    const recipeToFetch = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=' + drinkId2
+    console.log(recipeToFetch)
+
+    recipeFetched(recipeToFetch)
+
+}
+
+async function recipeFetched(recipeToFetch){
+    const response = await fetch(recipeToFetch)
+    console.log('response: ', response)
+    const data = await response.json()
+
+
+    const cocktailRecipeList = document.getElementById('cocktails')
+    cocktailRecipeList.innerHTML = ''
+
+
+    const cocktail = data.drinks[0]
+    const cocktailDiv = document.createElement('div')
+    cocktailDiv.setAttribute('class', 'col shadow-sm p-3 mb-5 bg-body rounded text-center')
+    cocktailDiv.setAttribute('id', 'cocktail')
+    cocktailRecipeList.append(cocktailDiv)
+
+    const cocktailImg = document.createElement('img');
+    cocktailImg.src = cocktail.strDrinkThumb;
+    cocktailImg.setAttribute('id', 'cocktail-img')
+    cocktailImg.setAttribute('class', 'rounded mx-auto d-block')
+    cocktailDiv.appendChild(cocktailImg);
+
+    const cocktailName = cocktail.strDrink
+    const heading = document.createElement('h4')
+    heading.innerHTML = cocktailName
+    cocktailDiv.appendChild(heading)
+    
+    const cocktailIngredients = document.createElement("ul");
+    cocktailDiv.appendChild(cocktailIngredients);  
+    
+    const getIngredients = Object.keys(cocktail)
+      .filter(function (ingredient) {
+        return ingredient.indexOf("strIngredient") == 0;
+      })
+      .reduce(function (ingredients, ingredient) {
+        if (cocktail[ingredient] != null) {
+          ingredients[ingredient] = cocktail[ingredient];
+        }
+        return ingredients;
+      }, {});
+  
+    for (let key in getIngredients) {
+      let value = getIngredients[key];
+      listItem = document.createElement("li");
+      listItem.innerHTML = value;
+      cocktailIngredients.appendChild(listItem);
+    }
+
+    const instructions = cocktail.strInstructions
+    const bodyText = document.createElement('p')
+    bodyText.innerHTML = instructions
+    cocktailDiv.appendChild(bodyText)
 
 }
 
@@ -76,7 +140,7 @@ const learnToMake = () => {
 //         const recipeStart = event.target.parentElement.parentElement
 //         recipeStart.innerHTML = ''
 
-//         const recipeToFetch = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=' + drinkId
+//         
 
 //         console.log(recipeToFetch)
 //         // fetchTheRecipe(recipeToFetch)
