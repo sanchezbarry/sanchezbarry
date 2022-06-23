@@ -18,6 +18,11 @@ h4 {
     width: 300px;
 }
 
+#random-drink img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
 #results h3 {
     padding-top: 15px;
     text-align: center;

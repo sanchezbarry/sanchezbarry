@@ -110,7 +110,7 @@ async function recipeFetched(recipeToFetch){
     const cocktailImg = document.createElement('img');
     cocktailImg.src = cocktail.strDrinkThumb;
     cocktailImg.setAttribute('id', 'cocktail-img')
-    cocktailImg.setAttribute('class', 'rounded mx-auto d-block')
+    cocktailImg.setAttribute('class', 'rounded mx-auto d-block img-fluid')
     cocktailDiv.appendChild(cocktailImg);
 
     const cocktailName = cocktail.strDrink
@@ -179,7 +179,7 @@ async function randomDrink(randomUrl){
     const cocktailImg = document.createElement('img');
     cocktailImg.src = cocktail.strDrinkThumb;
     cocktailImg.setAttribute('id', 'cocktail-img')
-    cocktailImg.setAttribute('class', 'rounded mx-auto d-block')
+    cocktailImg.setAttribute('class', 'rounded mx-auto d-block img-fluid')
     cocktailDiv.appendChild(cocktailImg);
 
     const cocktailName = cocktail.strDrink
