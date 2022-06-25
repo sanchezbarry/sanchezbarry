@@ -9,9 +9,16 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-  /* background: #f2f3fb; */
-  background: #7d2ae8;
+  background-image: url('./bg.jpg');
+  background-position: 25% 25%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+#landing-content {
+  color: white;
+}
+
 ::selection{
   color: #fff;
   background: #7d2ae8;
