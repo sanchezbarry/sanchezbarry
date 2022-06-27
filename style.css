@@ -9,10 +9,10 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-  background-image: url('./bg.jpg');
+  background-image: url('./mobilebg.png');
   background-position: 25% 25%;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat;
+
 }
 
 @media screen and (max-width: 414px) {
@@ -25,6 +25,7 @@ body{
 
 #landing-content {
   color: white;
+  background-color: #333a40;
 }
 
 ::selection{
@@ -142,25 +143,19 @@ header .close:hover{
 .icons a:nth-child(2):hover{
   background: #46C1F6;
 }
+
 .icons a:nth-child(3){
-  color: #e1306c;
-  border-color: #f5bccf;
-}
-.icons a:nth-child(3):hover{
-  background: #e1306c;
-}
-.icons a:nth-child(4){
   color: #25D366;
   border-color: #bef4d2;
 }
-.icons a:nth-child(4):hover{
+.icons a:nth-child(3):hover{
   background: #25D366;
 }
-.icons a:nth-child(5){
+.icons a:nth-child(4){
   color: #0088cc;
   border-color: #b3e6ff;
 }
-.icons a:nth-child(5):hover{
+.icons a:nth-child(4):hover{
   background: #0088cc;
 }
 .icons a:hover{
@@ -226,6 +221,12 @@ h4 {
     justify-content: center;
 }
 
+#cocktail {
+  margin: 10px;
+  color: white;
+  background-color: #333a40;
+}
+
 #results img {
     width: 300px;
 }
@@ -253,9 +254,7 @@ h4 {
     color:white;
 } */
 
-#cocktail {
-    margin: 10px;
-}
+
 
 ul {
     list-style: none;

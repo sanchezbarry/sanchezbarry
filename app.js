@@ -32,7 +32,7 @@ async function fetchTheDrinks(urlToFetch) {
 
         const cocktail = data.drinks[x]
         const cocktailDiv = document.createElement('div')
-        cocktailDiv.setAttribute('class', 'col shadow-sm p-3 mb-5 bg-body rounded text-center')
+        cocktailDiv.setAttribute('class', 'col shadow-sm p-3 mb-5 rounded text-center')
         cocktailDiv.setAttribute('id', 'cocktail')
         cocktailDivList.append(cocktailDiv)
 
@@ -103,7 +103,7 @@ async function recipeFetched(recipeToFetch){
 
     const cocktail = data.drinks[0]
     const cocktailDiv = document.createElement('div')
-    cocktailDiv.setAttribute('class', 'col shadow-sm p-3 mb-5 bg-body rounded text-center')
+    cocktailDiv.setAttribute('class', 'col shadow-sm p-3 mb-5 rounded text-center')
     cocktailDiv.setAttribute('id', 'cocktail')
     cocktailRecipeList.append(cocktailDiv)
 
@@ -172,7 +172,7 @@ async function randomDrink(randomUrl){
 
     const cocktail = data.drinks[0]
     const cocktailDiv = document.createElement('div')
-    cocktailDiv.setAttribute('class', 'col shadow-sm p-3 mb-5 bg-body rounded text-center')
+    cocktailDiv.setAttribute('class', 'col shadow-sm p-3 mb-5 rounded text-center')
     cocktailDiv.setAttribute('id', 'cocktail')
     cocktailRandomList.append(cocktailDiv)
 
