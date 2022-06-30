@@ -21,6 +21,10 @@ body{
   background-repeat: repeat;
   background-size: 500px;
   }
+
+  #landing-content {
+    width: 350px;
+  }
 }
 
 #landing-content {
@@ -258,5 +262,7 @@ h4 {
 
 ul {
     list-style: none;
+    /* text-align: left; */
 }
+
 
