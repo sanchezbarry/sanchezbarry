@@ -1,5 +1,6 @@
-## Welcome to the Tipsy Bartender!
+# Welcome to the Tipsy Bartender!
 
+## About this Prokect
 This website makes use of an API database (https://www.thecocktaildb.com/) to recommend drink recipes based on what booze you have lying around!
 
 3 different  methods are called on the website,
@@ -11,4 +12,12 @@ On top of this, the website has a share function to share it on social media, an
 
 The save function makes use of local storage.
 
+## Tech
 The website was created using HTML, CSS, and JavaScript. For CSS, Bootstrap was used.
+
+## Difficulties Faced
+The API had some limitations as some of the methods I wanted to explore were on a paid tier.
+The background... dances. 
+
+## What I would if I had more time
+I would improve the save function so that the user can save more than 1 drink.
