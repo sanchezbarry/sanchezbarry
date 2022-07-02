@@ -26,6 +26,9 @@ async function fetchTheDrinks(urlToFetch) {
   const cocktailRandomList = document.getElementById('random-drink')
   cocktailRandomList.innerHTML = ''
 
+  const cocktailSavedDrinks = document.getElementById('fav-container')
+  cocktailSavedDrinks.innerHTML = ''
+
   for (let x = 0; x < data.drinks.length; x++) {
 
     const cocktail = data.drinks[x]
@@ -86,18 +89,34 @@ const learnToMake = () => {
 // const savedDrinks = {}
 
 const saveDrink = (e) => { 
-  const cocktailName = e.target.dataset.drinkName
-  console.log(cocktailName)
 
-  const cocktailImg = e.target.dataset.drinkImg
-  console.log(cocktailImg)
+  const favDrinks = {
+    cocktailName: e.target.dataset.drinkName,
+    // console.log(cocktailName)
+  
+    cocktailImg: e.target.dataset.drinkImg
+    // console.log(cocktailImg)
+    }
 
-// check if there is an existing drink, if there is u need to push and append
-  localStorage.setItem('drinkName', cocktailName)
-  localStorage.setItem('drinkImg', cocktailImg)
+    if (window.localStorage.length === 0) {
+      window.localStorage.setItem('drink', JSON.stringify(favDrinks));
+    } else {
+        window.localStorage.setItem('drink'+(window.localStorage.length+1), JSON.stringify(favDrinks));
+    }
 
-  console.log(localStorage.getItem('drinkName'))
-  console.log(localStorage.getItem('drinkImg'))
+    console.log(favDrinks)
+//   const cocktailName = e.target.dataset.drinkName
+//   console.log(cocktailName)
+
+//   const cocktailImg = e.target.dataset.drinkImg
+//   console.log(cocktailImg)
+
+// // check if there is an existing drink, if there is u need to push and append
+//   localStorage.setItem('drinkName', cocktailName)
+//   localStorage.setItem('drinkImg', cocktailImg)
+
+//   console.log(localStorage.getItem('drinkName'))
+//   console.log(localStorage.getItem('drinkImg'))
 }
 
 //clears and fetches drink recipe, creates recipe name, img, instructions, ingredients.
@@ -189,21 +208,25 @@ const showFavDrink = () => {
   const cocktailSavedDrinks = document.getElementById('fav-container')
   cocktailSavedDrinks.innerHTML = ''
 
+  for (let i=0; i<window.localStorage.length; i++){
+
   const cocktailDiv = document.createElement('div')
   cocktailDiv.setAttribute('class', 'col shadow-sm p-3 mb-5 rounded text-center')
   cocktailDiv.setAttribute('id', 'cocktail')
   cocktailSavedDrinks.appendChild(cocktailDiv)
 
   const cocktailImg = document.createElement('img');
-  cocktailImg.src = localStorage.getItem('drinkImg')
+  cocktailImg.src = JSON.parse(window.localStorage.getItem(window.localStorage.key(i))).cocktailImg
   cocktailImg.setAttribute('id', 'cocktail-img')
   cocktailImg.setAttribute('class', 'rounded mx-auto d-block img-fluid')
   cocktailDiv.appendChild(cocktailImg);
 
-  const cocktailName = localStorage.getItem('drinkName')
+  const cocktailName = JSON.parse(window.localStorage.getItem(window.localStorage.key(i))).cocktailName
   const heading = document.createElement('h4')
   heading.innerHTML = cocktailName
   cocktailDiv.appendChild(heading)
+
+  }
 }
 
 //event listener for favdrink

@@ -8,8 +8,9 @@
 body{
   background-image: url('./mobilebg.png');
   background-position: 25% 25%;
-  background-repeat: repeat;
+  background-repeat: repeat
 
+  /* add image width height */
 }
 
 @media screen and (max-width: 414px) {
