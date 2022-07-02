@@ -82,7 +82,9 @@ const learnToMake = () => {
   recipeFetched(recipeToFetch)
 }
 
-//to show saved drinks
+//to save drinks
+// const savedDrinks = {}
+
 const saveDrink = (e) => { 
   const cocktailName = e.target.dataset.drinkName
   console.log(cocktailName)
@@ -90,13 +92,13 @@ const saveDrink = (e) => {
   const cocktailImg = e.target.dataset.drinkImg
   console.log(cocktailImg)
 
+// check if there is an existing drink, if there is u need to push and append
   localStorage.setItem('drinkName', cocktailName)
   localStorage.setItem('drinkImg', cocktailImg)
 
   console.log(localStorage.getItem('drinkName'))
   console.log(localStorage.getItem('drinkImg'))
 }
-
 
 //clears and fetches drink recipe, creates recipe name, img, instructions, ingredients.
 async function recipeFetched(recipeToFetch){
@@ -202,7 +204,6 @@ const showFavDrink = () => {
   const heading = document.createElement('h4')
   heading.innerHTML = cocktailName
   cocktailDiv.appendChild(heading)
-
 }
 
 //event listener for favdrink
