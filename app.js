@@ -229,7 +229,7 @@ const showFavDrink = () => {
   }
 
   const btnDiv = document.createElement('div')
-  btnDiv.setAttribute('class', 'mx-auto d-block')
+  btnDiv.setAttribute('class', 'd-flex justify-content-center')
   cocktailSavedDrinks.append(btnDiv)
 
   const removeBtn = document.createElement('button')
