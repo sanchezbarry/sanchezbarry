@@ -18,6 +18,7 @@ The website was created using HTML, CSS, and JavaScript. For CSS, Bootstrap was 
 ## Difficulties Faced
 The API had some limitations as some of the methods I wanted to explore were on a paid tier.
 The background... dances. 
+Improve the styling a bit more
 
 ## What I would if I had more time
 I would improve the save function so that the user can save more than 1 drink.
