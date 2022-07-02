@@ -263,4 +263,8 @@ ul {
     /* text-align: left; */
 }
 
+#remove {
+  margin: 10px; 
+  justify-content: center;
+}
 

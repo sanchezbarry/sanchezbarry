@@ -227,7 +227,26 @@ const showFavDrink = () => {
   cocktailDiv.appendChild(heading)
 
   }
+
+  const btnDiv = document.createElement('div')
+  btnDiv.setAttribute('class', 'mx-auto d-block')
+  cocktailSavedDrinks.append(btnDiv)
+
+  const removeBtn = document.createElement('button')
+  removeBtn.setAttribute('type', 'button')
+  removeBtn.setAttribute('class', 'btn btn-secondary mx-auto col-3')
+  removeBtn.setAttribute('id', 'remove')
+  removeBtn.innerText = "Clear All"
+
+  btnDiv.appendChild(removeBtn)
+
+  document.getElementById('remove').addEventListener('click', removeDrinks)
 }
+
+removeDrinks = () => {
+  localStorage.clear()
+}
+
 
 //event listener for favdrink
 document.getElementById('fav-drink').addEventListener('click', showFavDrink)
