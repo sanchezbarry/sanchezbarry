@@ -1,6 +1,25 @@
-# Welcome to the Tipsy Bartender!
+# Welcome to my portfolio!
 
-## About this Prokect
+## Project #4: Software Engineered (App)
+https://github.com/sanchezbarry/Workouter-App
+
+### Tech
+Flutter, Dart, Firebase, Firestore
+
+## Project #3: Software Engineered
+https://lunfy.github.io/Software-Engineer-Job-Portal-Frontend/
+
+### Tech
+MongoDB, Express, React, Node, MUI, HTML, CSS, JavaScript
+
+## Project #2: Bean there, Done that.
+https://bean-there-done-that.herokuapp.com/
+
+### Tech
+MongoDB, Express, Node, EJS, Bootstrap, HTML, CSS, JavaScript
+
+## Project #1: : Tipsy Bartender
+https://sanchezbarry.github.io/sanchezbarry/
 This website makes use of an API database (https://www.thecocktaildb.com/) to recommend drink recipes based on what booze you have lying around!
 
 3 different  methods are called on the website,
@@ -12,13 +31,6 @@ On top of this, the website has a share function to share it on social media, an
 
 The save function makes use of local storage.
 
-## Tech
+### Tech
 The website was created using HTML, CSS, and JavaScript. For CSS, Bootstrap was used.
 
-## Difficulties Faced
-The API had some limitations as some of the methods I wanted to explore were on a paid tier.
-The background... dances. 
-Improve the styling a bit more
-
-## What I would if I had more time
-I would improve the save function so that the user can save more than 1 drink.
