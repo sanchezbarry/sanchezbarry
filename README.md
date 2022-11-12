@@ -1,25 +1,30 @@
 # Welcome to my portfolio!
 
 ## Project #4: Software Engineered (App)
-https://github.com/sanchezbarry/Workouter-App
+Repo: https://github.com/sanchezbarry/Workouter-App
 
 ### Tech
 Flutter, Dart, Firebase, Firestore
 
+![screens](https://user-images.githubusercontent.com/104004364/201466041-71b57c30-428b-467c-831a-ed437b642ac0.png)
+
 ## Project #3: Software Engineered
-https://lunfy.github.io/Software-Engineer-Job-Portal-Frontend/
+Website: https://lunfy.github.io/Software-Engineer-Job-Portal-Frontend/
+Repo: https://github.com/sanchezbarry/Software-Engineer-Job-Portal-Frontend
 
 ### Tech
 MongoDB, Express, React, Node, MUI, HTML, CSS, JavaScript
 
 ## Project #2: Bean there, Done that.
-https://bean-there-done-that.herokuapp.com/
+Website: https://bean-there-done-that.herokuapp.com/
+Repo: https://github.com/sanchezbarry/coffee
 
 ### Tech
 MongoDB, Express, Node, EJS, Bootstrap, HTML, CSS, JavaScript
 
 ## Project #1: : Tipsy Bartender
-https://sanchezbarry.github.io/sanchezbarry/
+Website: https://sanchezbarry.github.io/sanchezbarry/
+Repo: https://github.com/sanchezbarry/sanchezbarry
 This website makes use of an API database (https://www.thecocktaildb.com/) to recommend drink recipes based on what booze you have lying around!
 
 3 different  methods are called on the website,
