@@ -9,7 +9,7 @@ JavaScript, CSS, HTML, Bootstrap, API calls
 ### Description
 A simple one-pager for a church's sermons to be hosted and played. The sermons are also searchable by sermon title, and a random verse can also be generated. 
 
-## Project #4: Software Engineered (Mobile App)
+## Project #4: Workouteer (Mobile App)
 Repo: https://github.com/sanchezbarry/Workouter-App
 
 ### Tech
