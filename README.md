@@ -17,7 +17,7 @@ Flutter, Dart, Firebase, Firestore
 
 ![screens](https://user-images.githubusercontent.com/104004364/201466041-71b57c30-428b-467c-831a-ed437b642ac0.png)
 
-## Project #3: Software Engineered
+## Project #3: Software Engineered (Backend is down momentarily)
 Website: https://lunfy.github.io/Software-Engineer-Job-Portal-Frontend/
 Repo: https://github.com/sanchezbarry/Software-Engineer-Job-Portal-Frontend
 
@@ -25,8 +25,9 @@ Repo: https://github.com/sanchezbarry/Software-Engineer-Job-Portal-Frontend
 MongoDB, Express, React, Node, MUI, HTML, CSS, JavaScript
 
 ## Project #2: Bean there, Done that.
-Website: https://bean-there-done-that.herokuapp.com/
+Website: https://coffee-cu87.onrender.com/
 Repo: https://github.com/sanchezbarry/coffee
+Coffee has many, many permutations. From the bean used, to the grind size, the temperature, time and more! This website helps baristas and coffee enthusiats alike to keep track of what permutations they've done, and what works best. This website features a full CRUD and user authentication system. Users can read, create, edit and delete recepies.
 
 ### Tech
 MongoDB, Express, Node, EJS, Bootstrap, HTML, CSS, JavaScript
