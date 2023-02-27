@@ -9,8 +9,20 @@ JavaScript, CSS, HTML, Bootstrap, API calls
 ### Description
 A simple one-pager for a church's sermons to be hosted and played. The sermons are also searchable by sermon title, and a random verse can also be generated. 
 
+## Project #5: Hangman (Java)
+Repo: https://github.com/sanchezbarry/hangman
+
+### Description
+A simple hangman app created after learning Java from a Udemy course. The game picks a random word from a list of words from an array, and users guess a letter at each time. The game only takes the 1st character of the user's input, in order to prevent mutiple guesses at once. This also helps to keep track of the wrong guesses accurately.  
+
+### Tech
+Java
+
 ## Project #4: Workouteer (Mobile App)
 Repo: https://github.com/sanchezbarry/Workouter-App
+
+### Description
+For my capstone project at GA, I wanted to challenge myself and create something completely new from the course. Workouter is a mobile app built on Flutter with a full CRUD, and authentication with Firebase. 
 
 ### Tech
 Flutter, Dart, Firebase, Firestore
