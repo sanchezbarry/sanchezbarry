@@ -2,6 +2,7 @@
 
 ## Work #1: CCK Sermons (Website)
 Link: https://cck.org.sg/sermons.html
+Repo: https://github.com/sanchezbarry/cck
 
 ### Tech
 JavaScript, CSS, HTML, Bootstrap, API calls
