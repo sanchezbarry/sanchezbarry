@@ -1,5 +1,15 @@
 # Welcome to my portfolio!
 
+## Project #6: Portfolio Website
+Link: https://sanchezbarry.com
+Repo: https://github.com/sanchezbarry/portfolio
+
+### Description
+This portfolio website to show off my skills and projects. I had also wanted to attempt using a custom domain for the first time.
+
+### Tech
+React, MUI, GH-Pages, JSX, Framer Motion
+
 ## Work #1: CCK Sermons (Website)
 Link: https://cck.org.sg/sermons.html
 Repo: https://github.com/sanchezbarry/cck
